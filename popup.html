@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dizi Takipçi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">▶</span>
+      <span class="logo-text">DİZİ TAKİPÇİ</span>
+    </div>
+    <button class="btn-add" id="btnShowForm" title="Manuel dizi ekle">+</button>
+  </header>
+
+  <div class="auto-banner" id="autoBanner" style="display:none">
+    <span class="auto-icon">🔴</span>
+    <span class="auto-text" id="autoText">Şu an izleniyor...</span>
+  </div>
+
+  <div class="form-overlay" id="formOverlay">
+    <div class="form-card">
+      <div class="form-header">
+        <h2 id="formTitle">Dizi Ekle</h2>
+        <button class="btn-close" id="btnCloseForm">✕</button>
+      </div>
+      <div class="form-body">
+        <div class="field">
+          <label>Dizi Adı</label>
+          <input type="text" id="inputName" placeholder="Better Call Saul" autocomplete="off"/>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Sezon</label>
+            <input type="number" id="inputSeason" min="1" max="99" value="1"/>
+          </div>
+          <div class="field">
+            <label>Bölüm</label>
+            <input type="number" id="inputEpisode" min="1" max="999" value="1"/>
+          </div>
+        </div>
+        <div class="field">
+          <label>Durum</label>
+          <div class="status-select" id="statusSelect">
+            <button class="status-btn active" data-value="watching">İzliyorum</button>
+            <button class="status-btn" data-value="paused">Beklemede</button>
+            <button class="status-btn" data-value="done">Bitti</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Not <span class="optional">(isteğe bağlı)</span></label>
+          <input type="text" id="inputNote" placeholder="Kaldığım yer..." autocomplete="off"/>
+        </div>
+      </div>
+      <div class="form-footer">
+        <input type="hidden" id="editingId" value=""/>
+        <button class="btn-save" id="btnSave">Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-tabs" id="filterTabs">
+    <button class="tab active" data-filter="all">Tümü</button>
+    <button class="tab" data-filter="watching">İzliyorum</button>
+    <button class="tab" data-filter="paused">Beklemede</button>
+    <button class="tab" data-filter="done">Bitti</button>
+  </div>
+
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" class="search-input" placeholder="Dizi ara..." autocomplete="off"/>
+  </div>
+
+  <div class="series-list" id="seriesList">
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">🎬</div>
+      <p>Henüz dizi eklenmedi.</p>
+      <p class="empty-sub">hdfilmcehennemi'de bir bölüm aç,<br>otomatik eklenecek!</p>
+    </div>
+  </div>
+
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

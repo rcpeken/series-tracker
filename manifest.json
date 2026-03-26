@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Dizi Takipçi",
+  "version": "2.0",
+  "description": "hdfilmcehennemi'de hangi bölümde kaldığını otomatik takip eder.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Dizi Takipçi"
+  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "*://*.hdfilmcehennemi.com/*",
+    "*://*.hdfilmcehennemi.net/*",
+    "*://*.hdfilmcehennemi.nl/*",
+    "*://*.hdfilmcehennemi.tv/*",
+    "*://*.hdfilmcehennemi.to/*",
+    "*://*.fullhdfilmcehennemi.com/*",
+    "*://*.hdfilmcehennemi2.com/*"
+  ],
+  "content_scripts": [
+  {
+    "matches": [
+      "*://*.hdfilmcehennemi.com/*",
+      "*://*.hdfilmcehennemi.net/*",
+      "*://*.hdfilmcehennemi.nl/*",
+      "*://*.hdfilmcehennemi.tv/*",
+      "*://*.hdfilmcehennemi.to/*",
+      "*://*.fullhdfilmcehennemi.com/*",
+      "*://*.hdfilmcehennemi2.com/*"
+    ],
+    "js": ["content.js"],
+    "all_frames": true,
+    "run_at": "document_end"
+  }
+],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
