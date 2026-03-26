@@ -21,8 +21,10 @@
 
 ## 📸 Ekran Görüntüleri
 
-> ![alt text](image.png)
-> ![alt text](image1.png)
+> <img width="1795" height="952" alt="Ekran görüntüsü 2026-03-27 004722" src="https://github.com/user-attachments/assets/49a973d2-a566-4046-8285-f5a4b9a58c15" />
+
+> <img width="1652" height="788" alt="Ekran görüntüsü 2026-03-27 004157" src="https://github.com/user-attachments/assets/e72fccfc-b5a6-4735-b886-6185dcf5cd97" />
+
 
 ---
 
@@ -49,8 +51,7 @@ series-tracker-v2/
 ├── background.js    → Service worker: mesaj yönetimi, storage güncellemeleri
 ├── popup.html       → Eklenti popup arayüzü (HTML)
 ├── popup.js         → Popup mantığı: liste render, filtreleme, CRUD
-├── styles.css       → Karanlık sinematik tema
-└── proje.md         → Detaylı teknik dokümantasyon
+└── styles.css       → Karanlık sinematik tema
 ```
 
 ---
